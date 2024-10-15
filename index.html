@@ -4,85 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Add-Ons</title>
-    
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #222;
-            color: #fff;
+            background-color: #1b1b1b;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
+
+        h1, h2 {
+            color: #ff3b3b;
         }
+
+        nav {
+            background-color: #2c2c2c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             margin-right: 15px;
         }
-        h1 {
-            color: #e94560;
+
+        .progress {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
         }
-        section {
-            margin-top: 20px;
+
+        .progress-bar {
+            height: 10px;
+            background-color: #ff3b3b;
+            width: 0;
+            transition: width 0.5s;
         }
+
         .downloads {
             margin: 20px 0;
         }
-        .downloads button {
-            padding: 10px 20px;
-            background-color: #e94560;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .downloads progress {
-            width: 100%;
+
+        .download-link {
+            display: block;
             margin: 10px 0;
+            color: #ff3b3b;
+            text-decoration: underline;
         }
-        footer {
-            margin-top: 30px;
-            text-align: center;
+
+        .section {
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#">Private Cloud</a>
+        <a href="#">Communication</a>
+        <a href="#">Security Add-Ons</a>
+        <a href="#">Solutions</a>
+        <a href="#">Company</a>
+        <a href="#">Support</a>
+        <span style="float: right;">EN</span>
+    </nav>
 
-    <header>
-        <nav>
-            <a href="#">Private Cloud</a>
-            <a href="#">Communication</a>
-            <a href="#">Security Add-Ons</a>
-            <a href="#">Solutions</a>
-            <a href="#">Company</a>
-            <a href="#">Support</a>
-        </nav>
-        <button>EN</button>
-    </header>
+    <h1>Security Add-Ons</h1>
+    <p>Enhanced defense for your webservers, applications, and website with network traffic filtering.</p>
 
-    <section>
-        <h1>Security Add-Ons</h1>
-        <p>Enhanced defense for your webservers, applications, and website with network traffic filtering.</p>
+    <h2>Active Directory Auditing Manager</h2>
 
-        <h2>Active Directory Auditing Manager</h2>
-
-        <div class="downloads">
-            <p>Installation_Guidelines.PDF</p>
-            <progress value="64" max="100"></progress>
-
-            <p>First Use Walk Through.MP4</p>
-            <button onclick="downloadFile()">Download</button>
-            
-            <p>Terms of Use.PDF</p>
-            <button onclick="downloadFile()">Download</button>
+    <div class="downloads">
+        <div>
+            <span>Installation_Guidelines.PDF</span>
+            <div class="progress">
+                <div class="progress-bar" style="width: 60%;"></div>
+            </div>
         </div>
+        <a class="download-link" href="#">First Use Walk Through.MP4</a>
+        <a class="download-link" href="#">Terms of Use.PDF</a>
+    </div>
 
+    <div class="section">
+        <h3>Other Security Add-Ons</h3>
         <ul>
             <li>Antivirus</li>
             <li>Asset Management</li>
@@ -93,18 +99,16 @@
             <li>MFA</li>
             <li>Monitoring</li>
         </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Security Add-Ons</p>
-    </footer>
+    </div>
 
     <script>
-        function downloadFile() {
-            alert('Download initiated!');
-            // You can add logic to download specific files if needed
-        }
+        // Example JavaScript functionality (can be customized)
+        document.querySelectorAll('.download-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Download started for: ' + this.innerText);
+            });
+        });
     </script>
-
 </body>
 </html>
