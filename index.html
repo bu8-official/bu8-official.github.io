@@ -4,60 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Add-Ons</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/bu8-official/portfolio/refs/heads/main/style.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        h1 {
+            color: #e94560;
+        }
+        section {
+            margin-top: 20px;
+        }
+        .downloads {
+            margin: 20px 0;
+        }
+        .downloads button {
+            padding: 10px 20px;
+            background-color: #e94560;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .downloads progress {
+            width: 100%;
+            margin: 10px 0;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+
+    <header>
         <nav>
-            <ul>
-                <li><a href="#">Private Cloud</a></li>
-                <li><a href="#">Communication</a></li>
-                <li><a href="#">Security Add-Ons</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-            <div class="lang">
-                <button>EN</button>
-            </div>
+            <a href="#">Private Cloud</a>
+            <a href="#">Communication</a>
+            <a href="#">Security Add-Ons</a>
+            <a href="#">Solutions</a>
+            <a href="#">Company</a>
+            <a href="#">Support</a>
         </nav>
-        <section class="content">
-            <button class="back-btn">← Documents</button>
-            <h1>Security Add-Ons</h1>
-            <p>Enhanced defense for your webservers, applications, and website with network traffic filtering.</p>
+        <button>EN</button>
+    </header>
 
-            <div class="addons">
-                <h2>Active Directory Auditing Manager</h2>
-                <div class="tutorials">
-                    <div class="file">
-                        <p>Installation_Guidelines.PDF</p>
-                        <progress value="64" max="100"></progress>
-                    </div>
-                    <div class="file">
-                        <p>First Use Walk Through.MP4</p>
-                        <button>Download</button>
-                    </div>
-                    <div class="file">
-                        <p>Terms of Use.PDF</p>
-                        <button>Download</button>
-                    </div>
-                </div>
-            </div>
+    <section>
+        <h1>Security Add-Ons</h1>
+        <p>Enhanced defense for your webservers, applications, and website with network traffic filtering.</p>
 
-            <div class="other-addons">
-                <ul>
-                    <li>Antivirus</li>
-                    <li>Asset Management</li>
-                    <li>Backup</li>
-                    <li>Load Balancer</li>
-                    <li>Managed Firewall</li>
-                    <li>MDM</li>
-                    <li>MFA</li>
-                    <li>Monitoring</li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    <script src="https://raw.githubusercontent.com/bu8-official/portfolio/refs/heads/main/script.js"></script>
+        <h2>Active Directory Auditing Manager</h2>
+
+        <div class="downloads">
+            <p>Installation_Guidelines.PDF</p>
+            <progress value="64" max="100"></progress>
+
+            <p>First Use Walk Through.MP4</p>
+            <button onclick="downloadFile()">Download</button>
+            
+            <p>Terms of Use.PDF</p>
+            <button onclick="downloadFile()">Download</button>
+        </div>
+
+        <ul>
+            <li>Antivirus</li>
+            <li>Asset Management</li>
+            <li>Backup</li>
+            <li>Load Balancer</li>
+            <li>Managed Firewall</li>
+            <li>MDM</li>
+            <li>MFA</li>
+            <li>Monitoring</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Security Add-Ons</p>
+    </footer>
+
+    <script>
+        function downloadFile() {
+            alert('Download initiated!');
+            // You can add logic to download specific files if needed
+        }
+    </script>
+
 </body>
 </html>
