@@ -14,8 +14,8 @@ plugins:
 # baseurl: "" # the subpath of your site, e.g. /blog, leave blank for root
 # url: "https://your-github-username.github.io" # the base hostname & protocol for your site
 
-# GitHub Pages theme
-theme: hacker
+# # GitHub Pages theme
+# theme: hacker
 
 # Other options
 # paginate: 5 # Number of posts per page
