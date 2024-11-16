@@ -1,2 +1,0 @@
-# pentest-by-waleed
-Portfolio
